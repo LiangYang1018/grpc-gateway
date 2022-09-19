@@ -24,9 +24,8 @@ func NewServer() *server {
 
 func (s *server) SayHello(ctx context.Context, in *helloworldpb.HelloRequest) (*helloworldpb.HelloReply, error) {
 	fmt.Println("receive something.......")
-	fmt.Println(in.Name)
-	fmt.Println(in.Level)
-	return &helloworldpb.HelloReply{Message: in.Name + " world"}, nil
+	fmt.Println(in.Items)
+	return &helloworldpb.HelloReply{Message: " world"}, nil
 }
 
 func main() {

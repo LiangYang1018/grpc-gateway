@@ -20,8 +20,7 @@ service Greeter {
 
 // The request message containing the user's name
 message HelloRequest {
-  string name = 1;
-  string level = 2;
+  repeated Item items = 1;
 }
 
 // The response message containing the greetings
@@ -29,13 +28,9 @@ message HelloReply {
   string message = 1;
 }
 
-message RequestMessage {
-  string var = 1;
-  double key1 = 2;
-  double key2 = 3;
-  string key3 = 4;
+message Item {
+  string high = 1;
+  string width = 2;
 }
 
-message ArrayRequest {
-  repeated RequestMessage request = 1;
-}
+
